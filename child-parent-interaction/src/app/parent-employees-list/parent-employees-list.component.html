@@ -1,0 +1,28 @@
+<div class="container">
+  <h3> Interaction between parent child component</h3>
+  <br/><br/>
+  <table class="table" *ngIf="showParentEmployees">
+    <thead>
+      <tr>
+        <th> Emp ID</th>
+        <th> Name</th>
+        <th> Age</th>
+        <th> Designation</th>
+        <th> Salary</th>
+        <th> </th>
+      </tr>
+      <tr *ngFor="let emp of employees">
+        <td> {{emp.empId}} </td>
+        <td> {{emp.name}} </td>
+        <td> {{emp.age}} </td>
+        <td> {{emp.designation}} </td>
+        <td> {{emp.salary}} </td>
+        <td> <button class="btn btn-primary" (click)="EditEmployee(emp)"> Edit </button> </td>
+      </tr>
+    </thead>
+  </table>
+  <div *ngIf="showEmployee">
+    <app-child-edit-employee [PersonData] = 'personToEdit' (updatedEmployee)="updateParentComponent($event)"></app-child-edit-employee>
+  </div>
+  </div>
+

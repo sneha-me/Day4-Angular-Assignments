@@ -1,0 +1,36 @@
+      <form>
+            <div class="form-group">
+              <label for="empId">Employee Id: </label>
+              <input type="text" class="form-control" [(ngModel)]="PersonData.empId" name="empId"/>
+            </div>
+            <div class="form-group">
+              <label for="name">Name: </label>
+              <input type="text" class="form-control" [(ngModel)]= "PersonData.name" name="empName"/>
+            </div>
+            <div class="form-group">
+              <label for="age">Age: </label>
+              <input type="text" class="form-control" [(ngModel)]= "PersonData.age" name="empAge"/>
+            </div>
+            <div class="form-group">
+              <label for="designation">Designation: </label>
+              <input type="text" class="form-control" [(ngModel)]="PersonData.designation" name="empDesg"/>
+            </div>
+            <div class="form-group">
+              <label for="salary">Salary: </label>
+              <input type="text" class="form-control" [(ngModel)]="PersonData.salary" name="empSal"/>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" (click)="updateEmployeeDetails()"  >  Save </button>
+            </div>
+          </form>
+  
+
+
+
+
+
+
+
+
+<h3> </h3>
+
